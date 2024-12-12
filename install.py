@@ -26,3 +26,5 @@ subprocess.run(['bash', '-c', 'source ./conf/general.sh && check_root'])
 
 print(f"Mise à jour de votre système {system_test}")
 subprocess.run(['bash', '-c', 'source ./conf/general.sh && sys_update'])
+
+menu ()
