@@ -18,7 +18,7 @@ openssh_install () {
             read ssh_custom_port
             echo "Ouverture du port $ssh_custom_port"
             sudo ufw allow $ssh_custom_port > /dev/null 2>&1
-        else;
+        else
             echo "Choix incorrect. Veuillez entrer 'y' ou 'n'."
             read ssh_port
         fi
