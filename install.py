@@ -5,9 +5,8 @@ import os
 import subprocess
 import time
 
-# Les sources  Python
+# Sources Python
 from conf.detection import sys_detec
-
 
 
 # Lancement du script
@@ -23,3 +22,6 @@ print(sys_detec())
 print("")
 
 subprocess.run(['bash', '-c', 'source ./conf/general.sh && check_root'])
+
+print(f"Mise à jour de votre système {host_executer}")
+subprocess.run(['bash', '-c', 'source ./conf/general.sh && sys_update'])

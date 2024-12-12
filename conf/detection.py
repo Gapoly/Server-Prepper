@@ -7,13 +7,16 @@ def sys_detec ():
 
     if host_executer == 'ubuntu':
         #executer les versions ubuntu
-        return("Système Ubuntu détecté")
-        systeme="ubuntu"
+        #systeme="ubuntu"
+        print("Système Ubuntu détecté")
+        return(host_executer)
+        
 
     elif host_executer == 'debian':
-        # executer les versions Debian
-        return("Système Debian détecté")
-        systeme="debian"
+        #systeme="debian"
+        print("Système Debian détecté")
+        return(host_executer)
+        
 
     else:
         #quitter le script"
