@@ -16,11 +16,9 @@ def menu ():
         if choice == 1:
             subprocess.run(['bash', '-c', 'source ./functions/web.sh && web_install'])
         elif choice == 2:
-            #subprocess.run(['bash', '-c', 'source ./functions/web.sh && web_install'])
             print("test 2")
         elif choice == 3:
             print("test 3")
-            #subprocess.run(['bash', '-c', 'source ./functions/web.sh && web_install'])
         else:
             print("Valeur incorrect")
             continue
