@@ -20,4 +20,40 @@ web_install() {
             read php_choice
         fi
     done
+
+    while true; do
+        echo ""
+
+        cat << EOF
+Quel port voulez vous ouvrir?
+
+1. 80
+2. 443
+3. 80 & 443
+4. Autre
+EOF
+        read web_port
+        if [ "$web_port" == "1" ]; then
+            echo "Ouverture du port 80"
+            ufw allow 80
+            break
+        elif [ "$web_port"  == "2" ]; then
+            echo "Ouverture du port 443"
+            ufw allow 443
+            break
+        elif [ "$web_port"  == "3" ]; then
+            echo "Ouverture du port 80 & 443"
+            ufw allow 80
+            ufw allow 443
+            break
+        elif [ "$web_port"  == "4" ]; then
+            echo "Choisissez votre port"
+            read custom_port
+            ufw allow $custom_port
+            break
+        else;then
+            echo "Valeur incorrect"
+            continue
+        fi
+    done
 }
