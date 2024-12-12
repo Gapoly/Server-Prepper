@@ -15,6 +15,7 @@ def menu ():
 
         if choice == 1:
             subprocess.run(['bash', '-c', 'source ./functions/web.sh && web_install'])
+            break
         elif choice == 2:
             print("test 2")
         elif choice == 3:
