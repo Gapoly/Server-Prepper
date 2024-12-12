@@ -17,7 +17,7 @@ def menu ():
             subprocess.run(['bash', '-c', 'source ./functions/web.sh && web_install'])
             break
         elif choice == 2:
-            print("test 2")
+            subprocess.run(['bash', '-c', 'source ./functions/docker.sh && docker_install'])
         elif choice == 3:
             print("test 3")
         else:
