@@ -1,12 +1,17 @@
 #!/bin/bash
 
-# Récupérer le nom de l'utilisateur actuel
-user=$(whoami)
-
-
-
-
-# Vérifier si l'utilisateur est root
+welcome () {
+cat << EOF
+.·:''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''':·.
+: :   ____                             ____                                   : :
+: :  / ___|  ___ _ ____   _____ _ __  |  _ \ _ __ ___ _ __  _ __   ___ _ __   : :
+: :  \___ \ / _ \ '__\ \ / / _ \ '__| | |_) | '__/ _ \ '_ \| '_ \ / _ \ '__|  : :
+: :   ___) |  __/ |   \ V /  __/ |    |  __/| | |  __/ |_) | |_) |  __/ |     : :
+: :  |____/ \___|_|    \_/ \___|_|    |_|   |_|  \___| .__/| .__/ \___|_|     : :
+: :                                                  |_|   |_|                : :
+'·:...........................................................................:·'
+EOF
+}
 
 check_root () {
 
@@ -19,7 +24,7 @@ check_root () {
 # Vérifier si l'utilisateur appartient au groupe sudo
     if groups "$user" | grep -qw "sudo"; then
         echo "Vous êtes dans le groupe sudo."
-        echo -e "Veuillez entrer votre mot de passe pour continuer."
+        echo "Veuillez entrer votre mot de passe pour continuer."
     
     # Tester une commande sudo pour demander le mot de passe
         if sudo -v; then
