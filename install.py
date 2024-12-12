@@ -18,10 +18,10 @@ print("Démarrage du script")
 print("")
 
 time.sleep(2.0)
-print(sys_detec())
+system_test=sys_detec()
 print("")
 
 subprocess.run(['bash', '-c', 'source ./conf/general.sh && check_root'])
 
-print(f"Mise à jour de votre système {host_executer}")
+print(f"Mise à jour de votre système {system_test}")
 subprocess.run(['bash', '-c', 'source ./conf/general.sh && sys_update'])
