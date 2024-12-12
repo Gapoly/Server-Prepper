@@ -14,11 +14,13 @@ def menu ():
         choice=int(input("Choisissez le type de serveur que vous voulez créer : "))
 
         if choice == 1:
-            print("""
-1. Apache2
-2. Nginx (ne marche pas)
-""")
-            choice_web=int(input("Choisissez le serveur web que vous voulez créer : "))
-            if choice_web == 1:
-                print("Installation de Apache2")
-                subprocess.run(['bash', '-c', 'source ./functions/apache2.sh && apache2'])
+            subprocess.run(['bash', '-c', 'source ./functions/web.sh && web_install'])
+        elif choice == 2:
+            #subprocess.run(['bash', '-c', 'source ./functions/web.sh && web_install'])
+            print("test 2")
+        elif choice == 3:
+            print("test 3")
+            #subprocess.run(['bash', '-c', 'source ./functions/web.sh && web_install'])
+        else:
+            print("Valeur incorrect")
+            continue

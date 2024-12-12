@@ -1,7 +1,10 @@
 #!/bin/bash
 
 
-apache2 () {
+web_install () {
+
+
+    
     echo "Installation d'Apache2"
     sudo apt-get install apache2 -y > /dev/null 2>&1
 
