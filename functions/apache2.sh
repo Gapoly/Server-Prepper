@@ -14,7 +14,7 @@ read php_choice
 
 while true; do
     if ["$php_coice" == y]; then
-        sudo apt-get install php php-curl -y
+        sudo apt-get install php curl php-curl -y
     elif ["$php_coice" == n]; then
         break
     else
