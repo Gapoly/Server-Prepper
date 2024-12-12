@@ -7,6 +7,7 @@ import time
 
 # Sources Python
 from conf.detection import sys_detec
+from conf.menu import menu
 
 
 # Lancement du script
