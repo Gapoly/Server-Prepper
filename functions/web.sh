@@ -8,11 +8,11 @@ web_install() {
     read php_choice
 
     while true; do
-        if [ "$php_choice" == "y" or "Y" ]; then
+        if [ "$php_choice" == "y" and "Y" ]; then
             echo "Installation de PHP et de ses dépendances..."
             sudo apt-get install php curl php-curl -y > /dev/null 2>&1
             break
-        elif [ "$php_choice" == "n" or "N" ]; then
+        elif [ "$php_choice" == "n" and "N" ]; then
             echo "Installation de PHP annulée."
             break
         else
