@@ -51,7 +51,7 @@ EOF
             read custom_port
             ufw allow $custom_port
             break
-        else;then
+        else
             echo "Valeur incorrect"
             continue
         fi
