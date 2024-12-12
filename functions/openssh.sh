@@ -13,7 +13,7 @@ openssh_install () {
             echo "Ouverture du port 22 - SSH"
             sudo ufw allow 22 > /dev/null 2>&1
             break
-        elif [ "$ssh_port" == "n" ] || [ "$ssh_port" == "N" ]
+        elif [ "$ssh_port" == "n" ] || [ "$ssh_port" == "N" ]; then
             echo "Quel port voulez vous utilisez?"
             read ssh_custom_port
             echo "Ouverture du port $ssh_custom_port"
