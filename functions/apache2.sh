@@ -11,7 +11,7 @@ apache2 () {
 
     while true; do
         if ["$php_coice" == y]; then
-            sudo apt-get install php curl php-curl -y
+            sudo apt-get install php curl php-curl -y > /dev/null 2>&1
         elif ["$php_coice" == n]; then
             break
         else

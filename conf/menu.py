@@ -21,4 +21,4 @@ def menu ():
             choice_web=int(input("Choisissez le serveur web que vous voulez créer : "))
             if choice_web == 1:
                 print("Installation de Apache2")
-                subprocess.run(['bash', '-c', 'source ../functions/apache2.sh && apache2'])
+                subprocess.run(['bash', '-c', 'source ./functions/apache2.sh && apache2'])
