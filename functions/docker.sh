@@ -5,7 +5,7 @@
 # Vérifier et agir en fonction de la valeur
 
 
-docker () {
+docker_install () {
 
   host_executer=$(python3 ./conf/detection.py)
 
