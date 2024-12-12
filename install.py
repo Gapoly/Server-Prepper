@@ -20,7 +20,7 @@ print("Démarrage du script")
 print("")
 
 time.sleep(2.0)
-print(sys_detec) 
+print(sys_detec()) 
 print("")
 
 subprocess.run(['bash', '-c', 'source ./conf/general.sh && check_root'])
