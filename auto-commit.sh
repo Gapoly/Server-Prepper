@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Entrez le message de votre commit : "
+echo "Entrez le message de votre commit :"
 read message
 
 git_com () {
