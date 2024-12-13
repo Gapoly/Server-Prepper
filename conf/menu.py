@@ -1,6 +1,7 @@
 #!/usr/bin/python
 
 import subprocess
+import sys
 
 def menu ():
 
@@ -28,6 +29,7 @@ VPN :
 12. OpenVPN          
               
 13. Exit
+14. Upgrade & Exit
 """)
         choice=int(input("Choisissez le type de serveur que vous voulez créer : "))
 
@@ -38,7 +40,12 @@ VPN :
         elif choice == 5:
             subprocess.run(['bash', '-c', 'source ./functions/openssh.sh && openssh_install'])
         elif choice == 13:
-            exit
+            print("Merci d'avoir utilisé Server Prepper")
+            sys.exit()
+        elif choice == 14:
+            subprocess.run(['bash', '-c', 'sudo apt-get upgrade -y > /dev/null 2>&1'])
+            print("Merci d'avoir utilisé Server Prepper")
+            sys.exit()
         else:
             print("Valeur incorrect")
             continue
