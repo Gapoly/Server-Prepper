@@ -19,7 +19,7 @@ sys_update () {
     sudo apt-get update > /dev/null 2>&1
     echo "Installation des packages nécessaire"
     #sudo apt-get upgrade -y > /dev/null 2>&1
-    sudo apt-get install ufw -y > /dev/null 2>&1
+    sudo apt-get install ufw openssl -y > /dev/null 2>&1
 }
 
 check_root () {
