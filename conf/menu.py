@@ -8,20 +8,20 @@ def menu ():
     while True:
 
         print("""
-1. Web
-2. Docker
-3. Uptime Kuma
-4. Code Server
-5. SSH
+1.  Web
+2.  Docker
+3.  Uptime Kuma
+4.  Code Server
+5.  SSH
               
 SGBD :
-6. MySQL
-7. MariaDB
-8. PostgreSQL
+6.  MySQL
+7.  MariaDB
+8.  PostgreSQL
 
               
 Multimédia :
-9. Minecraft
+9.  Minecraft
 10. qBittorrent
               
 VPN :
