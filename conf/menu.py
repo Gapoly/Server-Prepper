@@ -34,11 +34,11 @@ VPN :
         choice=int(input("Choisissez le type de serveur que vous voulez créer : "))
 
         if choice == 1:
-            subprocess.run(['bash', '-c', 'source ./functions/web.sh && web_install'])
+            subprocess.run(['bash', '-c', 'source ./functions/general.sh && web_install'])
         elif choice == 2:
-            subprocess.run(['bash', '-c', 'source ./functions/docker.sh && docker_install'])
+            subprocess.run(['bash', '-c', 'source ./functions/general.sh && docker_install'])
         elif choice == 5:
-            subprocess.run(['bash', '-c', 'source ./functions/openssh.sh && openssh_install'])
+            subprocess.run(['bash', '-c', 'source ./functions/general.sh && openssh_install'])
         elif choice == 13:
             print("Merci d'avoir utilisé Server Prepper")
             sys.exit()
