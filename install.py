@@ -8,11 +8,12 @@ import time
 # Sources Python
 from conf.detection import sys_detec
 from conf.menu import menu
-
+from conf.config import title
+from conf.config import pre_install
 
 # Lancement du script
 
-subprocess.run(['bash', '-c', 'source ./conf/conf.sh && welcome'])
+title()
 print("")
 
 time.sleep(1.0)
@@ -25,6 +26,6 @@ print("")
 
 subprocess.run(['bash', '-c', 'source ./conf/conf.sh && check_root'])
 
-subprocess.run(['bash', '-c', 'source ./conf/conf.sh && sys_update'])
+pre_install()
 
 menu ()

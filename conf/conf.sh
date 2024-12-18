@@ -1,34 +1,5 @@
 #!/bin/bash
 
-welcome () {
-cat << EOF
-.·:''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''':·.
-: :   ____                             ____                                   : :
-: :  / ___|  ___ _ ____   _____ _ __  |  _ \ _ __ ___ _ __  _ __   ___ _ __   : :
-: :  \___ \ / _ \ '__\ \ / / _ \ '__| | |_) | '__/ _ \ '_ \| '_ \ / _ \ '__|  : :
-: :   ___) |  __/ |   \ V /  __/ |    |  __/| | |  __/ |_) | |_) |  __/ |     : :
-: :  |____/ \___|_|    \_/ \___|_|    |_|   |_|  \___| .__/| .__/ \___|_|     : :
-: :                                                  |_|   |_|                : :
-'·:...........................................................................:·'
-EOF
-}
-
-pre_install () {
-    echo "Lancement des mises à jours"
-    sudo apt-get update > /dev/null 2>&1
-    echo "Installation des mises à jours"
-    sudo apt-get upgrade -y && sudo apt-get install ufw -y > /dev/null 2>&1
-}
-
-sys_update () {
-
-    echo "Lancement des mises à jours"
-    sudo apt-get update > /dev/null 2>&1
-    echo "Installation des packages nécessaire"
-    #sudo apt-get upgrade -y > /dev/null 2>&1
-    sudo apt-get install ufw openssl -y > /dev/null 2>&1
-}
-
 check_root () {
 
     # Check root
