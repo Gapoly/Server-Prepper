@@ -3,6 +3,13 @@
 import subprocess
 import sys
 
+from functions.general import web_install
+from functions.general import docker_install
+#from functions.general import 
+#from functions.general import 
+from functions.general import openssh_install
+
+
 def menu ():
 
     while True:
@@ -34,11 +41,11 @@ VPN :
         choice=int(input("Choisissez le type de serveur que vous voulez créer : "))
 
         if choice == 1:
-            subprocess.run(['bash', '-c', 'source ./functions/general.sh && web_install'])
+            web_install()
         elif choice == 2:
-            subprocess.run(['bash', '-c', 'source ./functions/general.sh && docker_install'])
+            docker_install()
         elif choice == 5:
-            subprocess.run(['bash', '-c', 'source ./functions/general.sh && openssh_install'])
+            openssh_install()
         elif choice == 13:
             print("Merci d'avoir utilisé Server Prepper")
             sys.exit()
