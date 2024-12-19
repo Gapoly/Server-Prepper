@@ -8,9 +8,7 @@ import time
 # Sources Python
 from conf.detection import sys_detec
 from conf.menu import menu
-from conf.config import title
-from conf.config import pre_install
-from conf.config import check_root
+from conf.config import *
 
 # Lancement du script
 
@@ -22,7 +20,7 @@ print("Démarrage du script")
 print("")
 
 time.sleep(2.0)
-sys_detec()
+host=sys_detec()
 print("")
 
 check_root()
