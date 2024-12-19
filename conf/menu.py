@@ -3,12 +3,7 @@
 import subprocess
 import sys
 
-from functions.general import web_install
-from functions.general import docker_install
-#from functions.general import 
-#from functions.general import 
-from functions.general import openssh_install
-
+from functions.general import *
 
 def menu ():
 
