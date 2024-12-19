@@ -43,13 +43,13 @@ def check_root ():
             try:
                 subprocess.check_call(["sudo", "-v"])
                 print("Mot de passe accepté. Le script continue.")
-                sys.exit(0)
+                #sys.exit(0)
             except subprocess.CalledProcessError:
                 print("Mot de passe incorrect. Le script s'arrête.")
-                sys.exit(1)
+                #sys.exit(1)
         else:
             print("Vous n'avez pas les permissions nécessaires pour exécuter ce script.")
-            sys.exit(1)
+            #sys.exit(1)
     except Exception as e:
         print(f"Erreur lors de la vérification des permissions : {e}")
-        sys.exit(1)
+        #sys.exit(1)
