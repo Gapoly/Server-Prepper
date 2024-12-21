@@ -20,7 +20,6 @@ SGBD :
 6.  MySQL
 7.  MariaDB
 8.  PostgreSQL
-
               
 Multimédia :
 9.  Minecraft
