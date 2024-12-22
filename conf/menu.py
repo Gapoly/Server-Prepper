@@ -41,10 +41,15 @@ VPN :
         elif choice == 5:
             openssh_install()
         elif choice == 13:
+            print("Activation du Pare-feu")
+            os.system("sudo ufw enable")
             print("Merci d'avoir utilisé Server Prepper")
             sys.exit()
         elif choice == 14:
-            subprocess.run(['bash', '-c', 'sudo apt-get upgrade -y > /dev/null 2>&1'])
+            print("Installation des mises à jours")
+            os.system("sudo apt-get upgrade -y > /dev/null 2>&1")
+            print("Activation du Pare-feu")
+            os.system("sudo ufw enable")
             print("Merci d'avoir utilisé Server Prepper")
             sys.exit()
         else:
