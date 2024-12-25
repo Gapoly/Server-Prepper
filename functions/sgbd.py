@@ -8,7 +8,6 @@ def mysql_install ():
     os.system("sudo apt-get install mysql -y > /dev/null 2>&1")
 
     mysql_port=int(input("Voulez vous utiliser le port par défaut? [y/n]"))
-
     while True:
         if mysql_port == "y" or "Y":
             print("Ouverture du port 3306")
@@ -21,3 +20,18 @@ def mysql_install ():
             break
         else:
             mysql_port=int(input("Choix incorrect. Veuillez entrer 'y' ou 'n' "))
+        
+    root_mysql=input("Voulez-vous mettre un mot de passe root pour MySQL? [y/n]")
+    while True:
+        if root_mysql == "y" or "Y":
+            mysql_passwd=input("Quel mot de passe voulez-vous utilisez?")
+            os.system("sudo mysql -u root")
+            break
+        elif mysql_port == "n" or "N":
+            mysql_port=int(input("Quel port voulez-vous utilisez?"))
+            print(f"Ouverture du port {mysql_port}")
+            os.system(f"sudo ufw allow {mysql_port}")
+            break
+        else:
+            mysql_port=int(input("Choix incorrect. Veuillez entrer 'y' ou 'n' "))
+        
