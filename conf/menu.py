@@ -4,6 +4,7 @@ import subprocess
 import sys
 
 from functions.general import *
+from functions.sgbd import *
 
 def menu ():
 
@@ -40,6 +41,12 @@ VPN :
             docker_install()
         elif choice == 5:
             openssh_install()
+        elif choice == 6:
+            mysql_install()
+        elif choice == 7:
+            mariadb_install()
+        elif choice == 8:
+            postgresql_install()
         elif choice == 13:
             print("Activation du Pare-feu")
             os.system("sudo ufw enable")
