@@ -126,3 +126,14 @@ def postgresql_install ():
             break
         else:
             root_postgresql=input("Choix incorrect. Veuillez entrer 'y' ou 'n' ")
+    
+    postgresql_db=input(int("Voulez-vous créer une base de données? [y/n]"))
+    while True:
+        if postgresql_db == "y" or "Y":
+            postgresql_db_name=input("Quel nom voulez-vous donnez à votre base de données?")
+            os.system(f"""sudo -u postgres psql -c 'CREATE DATABASE {postgresql_db_name};'""")
+            break
+        elif postgresql_db == "n" or "N":
+            break
+        else:
+            postgresql_db=input(int("Choix incorrect. Veuillez entrer 'y' ou 'n' "))
