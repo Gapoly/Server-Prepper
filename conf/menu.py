@@ -48,6 +48,8 @@ VPN :
             mariadb_install()
         elif choice == 8:
             postgresql_install()
+        elif choice == 9:
+            minecraft_install()
         elif choice == 13:
             print("Activation du Pare-feu")
             os.system("sudo ufw enable")
