@@ -14,3 +14,4 @@ def minecraft_install ():
     print("Ouverture du port 25565")
     os.system("sudo ufw allow 25565")
     os.system("screen -S minecraft java -Xmx2048M -Xms1024M -jar /minecraft-server/server.jar nogui")
+
