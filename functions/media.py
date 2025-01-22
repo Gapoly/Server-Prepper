@@ -13,4 +13,4 @@ def minecraft_install ():
               sudo echo "eula=true" > /minecraft-server/eula.txt""")
     print("Ouverture du port 25565")
     os.system("sudo ufw allow 25565")
-    os.system("screen -S minecraft java -Xmx1024M -Xms1024M -jar /minecraft-server/server.jar nogui")
+    os.system("screen -S minecraft java -Xmx2048M -Xms1024M -jar /minecraft-server/server.jar nogui")
