@@ -5,6 +5,7 @@ import sys
 from functions.general import *
 from functions.sgbd import *
 from functions.media import *
+from functions.vpn import *
 
 def menu ():
 
