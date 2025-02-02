@@ -50,13 +50,20 @@ VPN :
 
         elif choice == 7:
             minecraft_install()
+        elif choice == 8:
+            qbittorrent_install()
 
-        elif choice == 13:
+        elif choice == 9:
+            wireguard_install()
+        elif choice == 10:
+            openvpn_install()
+        
+        elif choice == 11:
             print("Activation du Pare-feu")
             os.system("sudo ufw enable")
             print("Merci d'avoir utilisé Server Prepper")
             sys.exit()
-        elif choice == 14:
+        elif choice == 12:
             print("Installation des mises à jours")
             os.system("sudo apt-get upgrade -y > /dev/null 2>&1")
             print("Activation du Pare-feu")
