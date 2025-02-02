@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 import distro
 
 # Detection de la distri

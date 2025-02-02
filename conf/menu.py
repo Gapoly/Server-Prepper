@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 import sys
 
@@ -13,25 +13,23 @@ def menu ():
         print("""
 1.  Web
 2.  Docker
-3.  Uptime Kuma
-4.  Code Server
-5.  SSH
+3.  SSH
               
 SGBD :
-6.  MySQL
-7.  MariaDB
-8.  PostgreSQL
+4.  MySQL
+5.  MariaDB
+6.  PostgreSQL
               
 Multimédia :
-9.  Minecraft
-10. qBittorrent
+7.  Minecraft
+8. qBittorrent
               
 VPN :
-11. Wireguard
-12. OpenVPN          
+9. Wireguard
+10. OpenVPN          
               
-13. Exit
-14. Upgrade & Exit
+11. Exit
+12. Upgrade & Exit
 """)
         choice=int(input("Choisissez le type de serveur que vous voulez créer : "))
 
@@ -39,16 +37,19 @@ VPN :
             web_install()
         elif choice == 2:
             docker_install()
-        elif choice == 5:
+        elif choice == 3:
             openssh_install()
-        elif choice == 6:
+
+        elif choice == 4:
             mysql_install()
-        elif choice == 7:
+        elif choice == 5:
             mariadb_install()
-        elif choice == 8:
+        elif choice == 6:
             postgresql_install()
-        elif choice == 9:
+
+        elif choice == 7:
             minecraft_install()
+
         elif choice == 13:
             print("Activation du Pare-feu")
             os.system("sudo ufw enable")

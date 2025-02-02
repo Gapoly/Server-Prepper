@@ -5,9 +5,7 @@ import sys
 
 # 1. Web
 # 2. Docker
-# 3. Uptime Kuma
-# 4. Code Server
-# 5. SSH
+# 3. SSH
 
 def web_install ():
     print ("Installation d'Apache 2")

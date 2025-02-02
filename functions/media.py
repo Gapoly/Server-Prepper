@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
-# 9.  Minecraft
-# 10. qBittorrent
+# 7.  Minecraft
+# 8. qBittorrent
 
 import os
 
@@ -15,3 +15,10 @@ def minecraft_install ():
     os.system("sudo ufw allow 25565")
     os.system("screen -S minecraft java -Xmx2048M -Xms1024M -jar /minecraft-server/server.jar nogui")
 
+def qbittorrent_install ():
+    print("Installation des packages nécessaires")
+    os.system("sudo apt-get install qbittorrent-nox -y > /dev/null 2>&1")
+    print("Ouverture du port 8080")
+    os.system("sudo ufw allow 8080")
+    print("Démarrage du service")
+    os.system("qbittorrent-nox")
