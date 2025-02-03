@@ -1,7 +1,5 @@
 # Server-Prepper
 
-<a><img style="margin: 10px" src="https://github.com/Gapoly/Server-Prepper/blob/main/python server.png" height="50" /></a>
-
 <p align='center'>
     <img src='https://github.com/Gapoly/Server-Prepper/blob/main/python server.png'/>
 </p>
